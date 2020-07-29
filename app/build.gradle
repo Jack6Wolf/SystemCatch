@@ -15,7 +15,9 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true  //开启代码混淆
+            zipAlignEnabled true // 进行压缩优化
+            shrinkResources true    // 移除无用的resource文件
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -23,14 +25,16 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
+    //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation project(path: ':systemcatch')
+    //noinspection GradleCompatible
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support:support-annotations:28.0.0'
     implementation 'android.arch.lifecycle:extensions:1.1.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
+//    implementation project(path: ':systemcatch')
+    implementation 'com.github.Jack6Wolf:SystemCatch:1.0.0'
 }
