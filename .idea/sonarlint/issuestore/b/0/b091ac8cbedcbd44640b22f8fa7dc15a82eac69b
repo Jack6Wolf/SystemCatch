@@ -1,41 +1,41 @@
 
+G
+java:S3011)",This accessibility bypass should be removed.(ƒ÷™¯øÿÿÿÿ
+A
+java:S1181°"%Catch Exception instead of Throwable.(ëÄ£Îşÿÿÿÿ
 B
-java:S3011[",This accessibility update should be removed.(˜ÂÓ˜
+java:S3011:",This accessibility update should be removed.(˜ÂÓ˜
 V
 java:S1119t";Refactor the code to remove this label and the need for it.(åÍœûÿÿÿÿ
 A
+java:S1181"%Catch Exception instead of Throwable.(ğğ¶ßüÿÿÿÿ
+C
+java:S3011­",This accessibility update should be removed.(Ó«§¯
+@
+java:S1181_"%Catch Exception instead of Throwable.(ğğ¶ßüÿÿÿÿ
+A
 java:S1181™"%Catch Exception instead of Throwable.(ëÄ£Îşÿÿÿÿ
+\
+java:S1192"GDefine a constant instead of duplicating this literal " error" 9 times.(æÚ8
+@
+java:S1181"%Catch Exception instead of Throwable.(ğğ¶ßüÿÿÿÿ
+@
+java:S1181,"%Catch Exception instead of Throwable.(ğğ¶ßüÿÿÿÿ
 @
 java:S1181="%Catch Exception instead of Throwable.(ğğ¶ßüÿÿÿÿ
 @
 java:S1181N"%Catch Exception instead of Throwable.(ğğ¶ßüÿÿÿÿ
-@
-java:S1181"%Catch Exception instead of Throwable.(ğğ¶ßüÿÿÿÿ
-C
-java:S3011­",This accessibility update should be removed.(Ó«§¯
-B
-java:S3011",This accessibility update should be removed.(˜ÂÓ˜
-@
-java:S1181,"%Catch Exception instead of Throwable.(ğğ¶ßüÿÿÿÿ
-A
-java:S1181"%Catch Exception instead of Throwable.(ğğ¶ßüÿÿÿÿ
-B
-java:S3011(",This accessibility update should be removed.(˜ÂÓ˜
-B
-java:S3011K",This accessibility update should be removed.(˜ÂÓ˜
-@
-java:S1181_"%Catch Exception instead of Throwable.(ğğ¶ßüÿÿÿÿ
-G
-java:S3011\",This accessibility bypass should be removed.(şãØÂøÿÿÿÿ
 B
 java:S3011",This accessibility update should be removed.(…ÑÈ§
 C
 java:S3011–",This accessibility update should be removed.(Ó«§¯
-A
-java:S1181°"%Catch Exception instead of Throwable.(ëÄ£Îşÿÿÿÿ
 G
-java:S3011)",This accessibility bypass should be removed.(ƒ÷™¯øÿÿÿÿ
+java:S3011\",This accessibility bypass should be removed.(şãØÂøÿÿÿÿ
 B
-java:S3011:",This accessibility update should be removed.(˜ÂÓ˜
-\
-java:S1192"GDefine a constant instead of duplicating this literal " error" 9 times.(æÚ8
+java:S3011[",This accessibility update should be removed.(˜ÂÓ˜
+B
+java:S3011",This accessibility update should be removed.(˜ÂÓ˜
+B
+java:S3011(",This accessibility update should be removed.(˜ÂÓ˜
+B
+java:S3011K",This accessibility update should be removed.(˜ÂÓ˜
