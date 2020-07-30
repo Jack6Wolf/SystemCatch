@@ -22,7 +22,11 @@ android {
         }
     }
 }
-
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     //noinspection GradleCompatible
@@ -35,6 +39,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation project(path: ':systemcatch')
-//    implementation 'com.github.Jack6Wolf:SystemCatch:1.0.0'
+//    implementation project(name: ':systemcatch')
+    implementation (name: 'systemcatch-release',ext:"aar")
+//    implementation 'com.github.Jack6Wolf:SystemCatch:1.0.2'
 }

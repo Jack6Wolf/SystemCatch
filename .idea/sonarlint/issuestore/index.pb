@@ -31,3 +31,13 @@ r
 Bsystemcatch/src/main/java/com/jack/systemcatch/hook/Constants.java,d\2\d24580a9a4d4342828cf37dda4d8b97d617b95e1
 
 Osystemcatch/src/main/java/com/jack/systemcatch/hook/ActivityThreadCallback.java,e\2\e2dd5bfbf8232981ad874ef9e26b6bcd1d38afa2
+X
+(gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
+<
+build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
+d
+4app/src/main/java/com/jack/demo/WelcomeActivity.java,2\1\21c34ef0cc6577619bda98a9b9e10808462279cc
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+O
+systemcatch/proguardMapping.txt,9\c\9cfa91008a85b35d3a0d2810a59015fd356eb78c

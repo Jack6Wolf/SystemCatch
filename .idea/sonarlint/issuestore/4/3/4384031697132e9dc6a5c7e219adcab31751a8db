@@ -1,0 +1,12 @@
+
+]	java:S1256"<This block of commented-out lines of code should be removed.(‡ãà¬şÿÿÿÿ8…µ¥ò¹.
+P
+java:S1874€"3Remove this use of "versionCode"; it is deprecated.(€å²8…µ¥ò¹.
+
+java:S1130{"mRemove the declaration of thrown exception 'java.lang.IllegalArgumentException' which is a runtime exception.(¹Å¢Üüÿÿÿÿ8…µ¥ò¹.
+J
+java:S3011…",This accessibility update should be removed.(˜ÂÓ˜8…µ¥ò¹.
+X	java:S1253"<This block of commented-out lines of code should be removed.(æ–óÎ8…µ¥ò¹.
+K
+java:S1144W")Remove this unused private "exit" method.(úş‡ şÿÿÿÿ8…µ¥ò¹.
+c	java:S899g"BDo something with the "boolean" value returned by "createNewFile".(´¸ö×şÿÿÿÿ8…µ¥ò¹.
