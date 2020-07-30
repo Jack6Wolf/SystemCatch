@@ -1,5 +1,9 @@
 
+Y
+java:S2696ß"6Make the enclosing method "static" or remove this set.(€¡òøÿÿÿÿ8şèóÀ¹.
+=
+java:S1181"!Catch Exception instead of Error.(©¢Èäøÿÿÿÿ
 H
-java:S1181Š"%Catch Exception instead of Throwable.(“ûó‘ùÿÿÿÿ8µ³¶¦¹.
-<
-java:S1181u"!Catch Exception instead of Error.(©¢Èäøÿÿÿÿ
+java:S1181¿"%Catch Exception instead of Throwable.(Ñéùşÿÿÿÿ8‹•ÄÀ¹.
+H
+java:S1181É"%Catch Exception instead of Throwable.(‡˜ÚÚøÿÿÿÿ8“”ùò¹.

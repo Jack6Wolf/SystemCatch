@@ -48,7 +48,7 @@ public class App extends Application {
             @Override
             public void throwable(Throwable throwable) {
                 Log.e("APP", "ThrowableListener:" + throwable.getMessage());
-//                throwable.printStackTrace();
+                throwable.printStackTrace();
                 handlelException(throwable);
                 //由用户主动触发退出
 //                exit();
