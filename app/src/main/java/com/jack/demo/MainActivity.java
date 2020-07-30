@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.e("TAG", "执行下去1");
-        mockNullPointer();
+//        mockNullPointer();
         Log.e("TAG", "还会继续执行下去吗1");
         Log.e("TAG", "还会继续执行下去吗2");
     }

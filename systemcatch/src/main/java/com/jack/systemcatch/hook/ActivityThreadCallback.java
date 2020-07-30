@@ -20,6 +20,7 @@ import static com.jack.systemcatch.hook.Constants.TAG;
 import static com.jack.systemcatch.hook.Reflection.getFieldValue;
 import static com.jack.systemcatch.hook.Reflection.getStaticFieldValue;
 import static com.jack.systemcatch.hook.Reflection.invokeMethod;
+import static com.jack.systemcatch.hook.Reflection.invokeStaticMethod;
 import static com.jack.systemcatch.hook.Reflection.setFieldValue;
 
 
@@ -234,7 +235,7 @@ class ActivityThreadCallback implements Handler.Callback {
     }
 
     private static boolean isCausedBy(Throwable t, Set<Class<? extends Throwable>> causes) {
-        if (null == t) {
+        if (t == null) {
             return false;
         }
 
@@ -313,12 +314,22 @@ class ActivityThreadCallback implements Handler.Callback {
     private static Object getActivityThread() {
         Object thread = null;
         try {
+            //通过sCurrentActivityThread属性变量拿
             thread = getStaticFieldValue(Class.forName("android.app.ActivityThread"), "sCurrentActivityThread");
-        } catch (final Throwable t1) {
-            Log.w(TAG, "ActivityThread.sCurrentActivityThread is inaccessible", t1);
+        } catch (Throwable t1) {
+            Log.w(TAG, t1);
+        }
+        if (thread != null) {
+            return thread;
         }
 
-        if (null != thread) {
+        try {
+            //通过currentActivityThread()静态方法拿：兼容<api 18
+            thread = invokeStaticMethod(Class.forName("android.app.ActivityThread"), "currentActivityThread");
+        } catch (Throwable e) {
+            Log.w(TAG, e);
+        }
+        if (thread != null) {
             return thread;
         }
 

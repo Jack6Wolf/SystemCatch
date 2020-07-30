@@ -41,4 +41,6 @@ ActivityThreadHooker.addThrowableListener(new CatchThrowable() {
     }
 });
 ```
+### 注意事项
 
+如果存在多个进程，其他进程也需要兜底。则需要在每个进程下Hook。

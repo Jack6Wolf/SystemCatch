@@ -1,11 +1,14 @@
 package com.jack.demo;
 
 import android.annotation.SuppressLint;
+import android.app.ActivityManager;
 import android.app.Application;
+import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Process;
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.jack.systemcatch.hook.ActivityThreadHooker;
@@ -16,6 +19,7 @@ import java.io.PrintWriter;
 import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author jack
@@ -28,6 +32,17 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         logFile = new File(this.getExternalCacheDir(), "throwable.txt");
+        String processName = getProcessName(this, Process.myPid());
+        if (TextUtils.isEmpty(processName) || !TextUtils.equals(getPackageName(), processName)) {
+            Log.e("APP",processName);
+            //如果有多个进程，其他进程也需要管理。请重复注册
+            hook();
+            return;
+        }
+        hook();
+    }
+
+    private void hook() {
         ActivityThreadHooker.hook("com.jack.demo.MainActivity");
         ActivityThreadHooker.addThrowableListener(new CatchThrowable() {
             @Override
@@ -39,6 +54,34 @@ public class App extends Application {
 //                exit();
             }
         });
+    }
+
+    /**
+     * 获取进程名
+     *
+     * @param cxt
+     * @param pid
+     * @return
+     */
+    public String getProcessName(Context cxt, int pid) {
+        try {
+            android.app.ActivityManager am = (android.app.ActivityManager) cxt.getSystemService(Context.ACTIVITY_SERVICE);
+            List<ActivityManager.RunningAppProcessInfo> runningApps = null;
+            if (am != null) {
+                runningApps = am.getRunningAppProcesses();
+            }
+            if (runningApps == null) {
+                return null;
+            }
+            for (android.app.ActivityManager.RunningAppProcessInfo procInfo : runningApps) {
+                if (procInfo.pid == pid) {
+                    return procInfo.processName;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     private void exit() {
