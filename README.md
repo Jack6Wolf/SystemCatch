@@ -24,7 +24,7 @@ allprojects {
 - Add the dependency
 ```
 dependencies {
-    implementation 'com.github.Jack6Wolf:SystemCatch:1.0.0'
+    implementation 'com.github.Jack6Wolf:SystemCatch:1.0.5'
 }
 ```
 

@@ -41,5 +41,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 //    implementation project(name: ':systemcatch')
 //    implementation (name: 'systemcatch-release',ext:"aar")
-    implementation 'com.github.Jack6Wolf:SystemCatch:6858f867efb4dab0f17a30d8833c5400a3d367ee'
+    implementation 'com.github.Jack6Wolf:SystemCatch:1.0.5'
 }

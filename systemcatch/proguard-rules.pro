@@ -48,6 +48,7 @@
 # 这在JSON实体映射时非常重要，比如fastJson
 -keepattributes *Annotation*,InnerClasses
 
+#如果您保留行号信息，取消注释以隐藏原始的源文件名。
 -renamesourcefileattribute SourceFile
 #抛出异常时保留源文件和代码行号
 -keepattributes SourceFile,LineNumberTable
