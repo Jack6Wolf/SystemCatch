@@ -1,0 +1,11 @@
+
+G
+java:S1181A"%Catch Exception instead of Throwable.(‡˜ÚÚøÿÿÿÿ8¬±°¹½.
+x
+java:S3008 "bRename this field "FIELD_PENDING_FINISHERS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆ‚ò
+w
+java:S3008"\Rename this field "CLASS_QUEUED_WORK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥º£«ıÿÿÿÿ
+U
+java:S1118":Add a private constructor to hide the implicit public one.(àºÕÑûÿÿÿÿ
+
+java:S3008"kRename this field "FIELD_PENDING_FINISHERS_VERSION8" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›ßä½

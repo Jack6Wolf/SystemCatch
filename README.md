@@ -41,6 +41,12 @@ ActivityThreadHooker.addThrowableListener(new CatchThrowable() {
     }
 });
 ```
+
+### 附加功能
+- 是否开启防SharedPreferences.apply引起ANR
+```
+ ActivityThreadHooker.removeSpQueue();
+```
 ### 注意事项
 
 如果存在多个进程，其他进程也需要兜底。则需要在每个进程下Hook。

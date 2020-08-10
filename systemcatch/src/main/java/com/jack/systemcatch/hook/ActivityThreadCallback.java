@@ -66,6 +66,8 @@ class ActivityThreadCallback implements Handler.Callback {
      */
     private static CatchThrowable catchThrowable;
 
+    public static boolean REMOVE_SP_QUEUE;
+
     /**
      * @param ignorePackages 包忽略名单
      */
@@ -92,6 +94,14 @@ class ActivityThreadCallback implements Handler.Callback {
     @Override
     public final boolean handleMessage(Message msg) {
         try {
+            //SharedPreferences.apply调用次数过多容易引起ANR。
+            // 所有此类ANR都是经由 QueuedWork.waitToFinish()触发的
+            // 解决方法:在调用此函数之前，将其中保存的队列手动清空
+            // for:https://mp.weixin.qq.com/s/IFgXvPdiEYDs5cDriApkxQ
+            if (REMOVE_SP_QUEUE) {
+                SpHelper.remove(msg);
+            }
+
             //交由自己处理
             if (this.mDelegate != null) {
                 return this.mDelegate.handleMessage(msg);

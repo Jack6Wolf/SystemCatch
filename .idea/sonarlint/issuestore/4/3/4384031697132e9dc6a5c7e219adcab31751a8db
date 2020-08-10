@@ -1,13 +1,11 @@
 
-]	java:S1256"<This block of commented-out lines of code should be removed.(‡ãà¬şÿÿÿÿ8…µ¥ò¹.
-P
-java:S1874€"3Remove this use of "versionCode"; it is deprecated.(€å²8…µ¥ò¹.
-c	java:S899g"BDo something with the "boolean" value returned by "createNewFile".(´¸ö×şÿÿÿÿ8…µ¥ò¹.
-
-java:S1130{"mRemove the declaration of thrown exception 'java.lang.IllegalArgumentException' which is a runtime exception.(¹Å¢Üüÿÿÿÿ8…µ¥ò¹.
-J
-java:S1604/"(Make this anonymous inner class a lambda(ÃêÕœùÿÿÿÿ8æÂºà».
-J
-java:S3011…",This accessibility update should be removed.(˜ÂÓ˜8…µ¥ò¹.
-K
-java:S1144W")Remove this unused private "exit" method.(úş‡ şÿÿÿÿ8…µ¥ò¹.
+I
+java:S1144")Remove this unused private "exit" method.(úş‡ şÿÿÿÿ8¥Óˆº½.
+H
+java:S1604"(Make this anonymous inner class a lambda(ÃêÕœùÿÿÿÿ8´ü‰º½.
+M
+java:S1874"3Remove this use of "versionCode"; it is deprecated.(€å²8¥Óˆº½.
+[	java:S125"<This block of commented-out lines of code should be removed.(²ûğìùÿÿÿÿ8ü×Šº½.
+a	java:S899"BDo something with the "boolean" value returned by "createNewFile".(´¸ö×şÿÿÿÿ8¥Óˆº½.
+
+java:S1130"mRemove the declaration of thrown exception 'java.lang.IllegalArgumentException' which is a runtime exception.(¹Å¢Üüÿÿÿÿ8¥Óˆº½.

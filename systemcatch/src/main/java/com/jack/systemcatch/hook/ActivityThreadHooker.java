@@ -34,15 +34,22 @@ public class ActivityThreadHooker {
             callback = new ActivityThreadCallback(pkgs.split("\\s*,\\s*"));
             //核心给mH设置自定义的Callback
             if (!(hooked = callback.hook())) {
-                Log.i(TAG, "Hook ActivityThread.mH.mCallback failed");
+                Log.d(TAG, "Hook ActivityThread.mH.mCallback failed");
             }
         } catch (Throwable t) {
             Log.w(TAG, "Hook ActivityThread.mH.mCallback failed", t);
         }
 
         if (hooked) {
-            Log.i(TAG, "Hook ActivityThread.mH.mCallback success!");
+            Log.d(TAG, "Hook ActivityThread.mH.mCallback success!");
         }
+    }
+
+    /**
+     * 是否开启防SharedPreferences.apply引起ANR
+     */
+    public static void removeSpQueue() {
+        ActivityThreadCallback.REMOVE_SP_QUEUE = true;
     }
 
     /**
