@@ -1,9 +1,19 @@
 
-H
-java:S1181É"%Catch Exception instead of Throwable.(‡˜ÚÚøÿÿÿÿ8Øü¢ã».
+|
+java:S3008E"ZRename this field "REMOVE_SP_QUEUE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡þ·Áþÿÿÿÿ8‰·Ü¹½.
+^	java:S125„"<This block of commented-out lines of code should be removed.(éÅÍÙýÿÿÿÿ8Ûô¿·½.
 D
-java:S1181"!Catch Exception instead of Error.(©¢Èäøÿÿÿÿ8Øü¢ã».
+java:S1181Ž"!Catch Exception instead of Error.(©¢Èäøÿÿÿÿ8Àõù·½.
 H
-java:S1181¿"%Catch Exception instead of Throwable.(ŽÑéùþÿÿÿÿ8Øü¢ã».
+java:S1181Å"%Catch Exception instead of Throwable.(‡˜ÚÚøÿÿÿÿ8¦Á¿·½.
+^	java:S125‚"<This block of commented-out lines of code should be removed.(Õ¤¯áÿÿÿÿÿ8Ûô¿·½.
+}
+java:S1104E"[Make REMOVE_SP_QUEUE a static final constant or non-public and provide accessors if needed.(‡þ·Áþÿÿÿÿ8‰·Ü¹½.
+W
+java:S1444E"5Make this "public static REMOVE_SP_QUEUE" field final(‡þ·Áþÿÿÿÿ8‰·Ü¹½.
 Y
-java:S2696ß"6Make the enclosing method "static" or remove this set.(Ž€¡òøÿÿÿÿ8þèóÀ¹.
+java:S2696Û"6Make the enclosing method "static" or remove this set.(Ž€¡òøÿÿÿÿ8¦Á¿·½.
+Y	java:S125‘"<This block of commented-out lines of code should be removed.(¯ÀðŒ8Àõù·½.
+H
+java:S1181»"%Catch Exception instead of Throwable.(ŽÑéùþÿÿÿÿ8¦Á¿·½.
+Y	java:S125†"<This block of commented-out lines of code should be removed.(¯ÀðŒ8Ûô¿·½.

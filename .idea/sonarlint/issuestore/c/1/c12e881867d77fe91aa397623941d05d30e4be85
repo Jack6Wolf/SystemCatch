@@ -1,8 +1,8 @@
 
-a
-java:S22595"?A "NullPointerException" could be thrown; "s" is nullable here.(€¬“ùÿÿÿÿ8ö³ÖÇ».
-]	java:S125*"<This block of commented-out lines of code should be removed.(µÃ¸ƒşÿÿÿÿ8ö³ÖÇ».
+]	java:S125"<This block of commented-out lines of code should be removed.(µÃ¸ƒşÿÿÿÿ8ñÃ€ã».
 E
-java:S1604"(Make this anonymous inner class a lambda(¸–œÅ8ÍÁáÇ».
+java:S1604"(Make this anonymous inner class a lambda(¸–œÅ8ÍÁáÇ».
+a
+java:S22592"?A "NullPointerException" could be thrown; "s" is nullable here.(€¬“ùÿÿÿÿ8ö³ÖÇ».
 X	java:S110"<This class has 8 parents which is greater than 5 authorized.(²Ú±8ö³ÖÇ».
-]	java:S125!"<This block of commented-out lines of code should be removed.(µÃ¸ƒşÿÿÿÿ8ñÃ€ã».
+]	java:S125'"<This block of commented-out lines of code should be removed.(µÃ¸ƒşÿÿÿÿ8ö³ÖÇ».

@@ -34,7 +34,7 @@ public class App extends Application {
         logFile = new File(this.getExternalCacheDir(), "throwable.txt");
         String processName = getProcessName(this, Process.myPid());
         if (TextUtils.isEmpty(processName) || !TextUtils.equals(getPackageName(), processName)) {
-            Log.e("APP",processName);
+            Log.e("APP", processName);
             //如果有多个进程，其他进程也需要管理。请重复注册
             hook();
             return;
@@ -43,7 +43,8 @@ public class App extends Application {
     }
 
     private void hook() {
-        ActivityThreadHooker.hook(null);
+        ActivityThreadHooker.hook("com.jack.demo.MainActivity");
+        ActivityThreadHooker.removeSpQueue();
         ActivityThreadHooker.addThrowableListener(new CatchThrowable() {
             @Override
             public void throwable(Throwable throwable) {
@@ -51,7 +52,7 @@ public class App extends Application {
                 throwable.printStackTrace();
                 handlelException(throwable);
                 //由用户主动触发退出
-//                exit();
+//                abort();
             }
         });
     }

@@ -1,41 +1,21 @@
 
 @
-java:S1181,"%Catch Exception instead of Throwable.(ğğ¶ßüÿÿÿÿ
-@
 java:S1181"%Catch Exception instead of Throwable.(ğğ¶ßüÿÿÿÿ
-A
-java:S1181™"%Catch Exception instead of Throwable.(ëÄ£Îşÿÿÿÿ
-B
-java:S3011[",This accessibility update should be removed.(˜ÂÓ˜
-G
-java:S3011)",This accessibility bypass should be removed.(ƒ÷™¯øÿÿÿÿ
-C
-java:S3011–",This accessibility update should be removed.(Ó«§¯
-B
-java:S3011(",This accessibility update should be removed.(˜ÂÓ˜
-G
-java:S3011\",This accessibility bypass should be removed.(şãØÂøÿÿÿÿ
-A
-java:S1181"%Catch Exception instead of Throwable.(ğğ¶ßüÿÿÿÿ
 @
-java:S1181N"%Catch Exception instead of Throwable.(ğğ¶ßüÿÿÿÿ
-V
-java:S1119t";Refactor the code to remove this label and the need for it.(åÍœûÿÿÿÿ
-B
-java:S3011",This accessibility update should be removed.(…ÑÈ§
-@
-java:S1181="%Catch Exception instead of Throwable.(ğğ¶ßüÿÿÿÿ
-B
-java:S3011K",This accessibility update should be removed.(˜ÂÓ˜
+java:S1181,"%Catch Exception instead of Throwable.(ğğ¶ßüÿÿÿÿ
 @
 java:S1181_"%Catch Exception instead of Throwable.(ğğ¶ßüÿÿÿÿ
 A
 java:S1181°"%Catch Exception instead of Throwable.(ëÄ£Îşÿÿÿÿ
-B
-java:S3011:",This accessibility update should be removed.(˜ÂÓ˜
+@
+java:S1181N"%Catch Exception instead of Throwable.(ğğ¶ßüÿÿÿÿ
+A
+java:S1181"%Catch Exception instead of Throwable.(ğğ¶ßüÿÿÿÿ
 \
 java:S1192"GDefine a constant instead of duplicating this literal " error" 9 times.(æÚ8
-B
-java:S3011",This accessibility update should be removed.(˜ÂÓ˜
-C
-java:S3011­",This accessibility update should be removed.(Ó«§¯
+A
+java:S1181™"%Catch Exception instead of Throwable.(ëÄ£Îşÿÿÿÿ
+@
+java:S1181="%Catch Exception instead of Throwable.(ğğ¶ßüÿÿÿÿ
+V
+java:S1119t";Refactor the code to remove this label and the need for it.(åÍœûÿÿÿÿ
