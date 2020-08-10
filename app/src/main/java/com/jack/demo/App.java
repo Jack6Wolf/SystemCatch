@@ -43,7 +43,7 @@ public class App extends Application {
     }
 
     private void hook() {
-        ActivityThreadHooker.hook("com.jack.demo.MainActivity");
+        ActivityThreadHooker.hook(null);
         ActivityThreadHooker.addThrowableListener(new CatchThrowable() {
             @Override
             public void throwable(Throwable throwable) {

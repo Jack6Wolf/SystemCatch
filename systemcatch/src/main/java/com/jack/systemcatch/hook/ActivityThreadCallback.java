@@ -1,8 +1,6 @@
 package com.jack.systemcatch.hook;
 
 import android.content.res.Resources;
-import android.os.Build;
-import android.os.DeadSystemException;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Process;
@@ -119,18 +117,22 @@ class ActivityThreadCallback implements Handler.Callback {
         } catch (RuntimeException e) {
             Throwable cause = e.getCause();
             //Android7.0才有该异常DeadSystemException
-            if (((Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) && isCausedBy(cause, DeadSystemException.class))
-                    // 通常发生在app升级安装之后，看起来像是系统bug
-                    || (isCausedBy(cause, NullPointerException.class) && hasStackTraceElement(e, LOADED_APK_GET_ASSETS))) {
-                //终止应用
+//            if (((Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) && isCausedBy(cause, DeadSystemException.class))
+//                    // 通常发生在app升级安装之后，看起来像是系统bug
+//                    || (isCausedBy(cause, NullPointerException.class) && hasStackTraceElement(e, LOADED_APK_GET_ASSETS))) {
+//                //终止应用
+//                return abort(e);
+//            }
+            // 通常发生在app升级安装之后，看起来像是系统bug
+            if (isCausedBy(cause, NullPointerException.class) && hasStackTraceElement(e, LOADED_APK_GET_ASSETS)) {
                 return abort(e);
             }
+            //解决DeadSystemException、DeadObjectException
             rethrowIfCausedByUser(e);
         } catch (Error e) {
             rethrowIfCausedByUser(e);
-            //处理DeadObjectException，一般都是由于提供远程服务的进程挂掉导致
-            //说明是系统内部错误，终止应用
-            return abort(e);
+            //说明是系统内部错误，终止应用(建议自己终止应用)
+//            return abort(e);
         }
 
         return true;
@@ -151,6 +153,8 @@ class ActivityThreadCallback implements Handler.Callback {
     private void rethrowIfCausedByUser(Error e) {
         if (isCausedByUser(e)) {
             throw e;
+        } else {
+            catchThrowableShow(e);
         }
     }
 
@@ -210,24 +214,6 @@ class ActivityThreadCallback implements Handler.Callback {
 
     /**
      * Throwable是否由该种类型异常引发
-     * eg:
-     * 1java.lang.RuntimeException:android.os.DeadSystemException
-     * 2 android.hardware.display.DisplayManagerGlobal.getDisplayInfo(DisplayManagerGlobal.java:201)
-     * 3 ......
-     * 4 android.os.DeadSystemException:
-     * 5 android.hardware.display.DisplayManagerGlobal.getDisplayInfo(DisplayManagerGlobal.java:201)
-     * 6 android.view.Display.updateDisplayInfoLocked(Display.java:990)
-     * 7 android.view.Display.updateDisplayInfoLocked(Display.java:984)
-     * 8 android.view.Display.getRealSize(Display.java:906)
-     * 9 com.google.android.gms.ads.omid.library.utils.b.a(:com.google.android.gms.policy_ads_fdr_dynamite@21829003@21829003.311174395.311174395:12)
-     * 10 com.google.android.gms.ads.omid.library.walking.e.run(:com.google.android.gms.policy_ads_fdr_dynamite@21829003@21829003.311174395.311174395:24)
-     * 11 android.os.Handler.handleCallback(Handler.java:751)
-     * 12 android.os.Handler.dispatchMessage(Handler.java:95)
-     * 13 android.os.Looper.loop(Looper.java:154)
-     * 14 android.app.ActivityThread.main(ActivityThread.java:6816)
-     * 15 java.lang.reflect.Method.invoke(Native Method)
-     * 16 com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1563)
-     * 17 com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1451)
      */
     @SafeVarargs
     private static boolean isCausedBy(Throwable t, Class<? extends Throwable>... causes) {
